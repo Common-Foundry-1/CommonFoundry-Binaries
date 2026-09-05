@@ -16,8 +16,10 @@ or independent reproduction of the cryptography.
   approximately 6.4 GB of public model data. This is not your wallet backup.
 - **Portable wallet and node:** download the RC4 runtime bootstrap archive for
   your operating system, extract it, then run `START-WALLET.bat` on Windows or
-  `./start-wallet.sh` on Linux. The included README explains runtime preparation
-  and Linux desktop dependencies. No earlier RC installation is needed.
+  `./start-wallet.sh` on Linux. The included README explains runtime preparation.
+  Linux also needs the wallet's GTK/WebKitGTK desktop libraries. No earlier RC
+  installation is needed. Prefer this bootstrap package for Linux first use;
+  the separate AppImage and deb builds do not run the Windows automatic setup.
 - **Miners:** use the RC4 miner archive for your operating system and follow its
   included README. Windows mining uses WSL2; mining also requires a compatible
   NVIDIA GPU and a certificate-pinned pool URL.
@@ -25,6 +27,9 @@ or independent reproduction of the cryptography.
 The small bootstrap archives contain the wallet, node, and authenticated
 downloader. The model data is fetched separately; keep the preparation window
 open until authentication completes. Interrupted transfers can be resumed.
+Reserve at least 16 GB of free space during preparation: downloaded chunks and
+the assembled 6.4 GB bank temporarily coexist. This supersedes the older 8 GB
+free-space estimate in the bundled runtime README.
 
 ## Download verification
 
